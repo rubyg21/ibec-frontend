@@ -1,0 +1,98 @@
+-> FW: VueJS v2, v3
+    -> Enfoque Web + CDN
+        -> Scripts externos para acceder a la fw
+        -> Referencia: https://v2.vuejs.org/v2/guide/#Getting-Started
+
+    -> Framework
+        -> Una libreria + metodologia de trabajo que permite producir software
+    
+
+    EJEMPLO: Calculadora con las operaciones Suma, Resta, Multiplicacion, Division con Vue
+
+    1. VISTA
+    2. LOGICA
+    3. INTEGRACION
+
+    Arq. Vue MVC - MVM - MVVM
+
+    SETUP: 
+        -> Incluir CDN VueJS
+        -> Setup de la aplicacion minima
+
+    VUE es de tipo data-binding
+    data-binding: invocar el valor de una variable de JS desde el HTML
+
+    -> La instancia de Vue se invoca en el app.js a traves de: const app = new Vue({...})
+    -> Una app de vue existe si existe la propiedad el: '#app' en la instancia y un div con esa ID
+    -> Todas las variables de la app tienen que estar definidas como propiedades del objeto data
+    
+
+    Est. basica de una instancia de Vue 
+
+    const app = new Vue({
+        el: '#app',
+        data: {
+            ...
+        },
+        methods: {
+            ...
+        },
+        mounted: function (){
+            ...
+        }
+    })
+
+    EJERCICIO RAPIDO #1: Crear una app de saludo que ingresamos en un input el nombre
+    le damos clic en un boton: "Saludar" - en pantalla (en una etiqueta p) aparece: Hola, [nombre]!
+
+        1. VISTA + SETUP
+            -> input
+            -> button
+            -> p 
+        
+        2. LOGICA
+            -> Input: recibo un nombre
+            -> Output: Saludo + nombre
+        
+        3. INTEGRACION
+            -> Agregar el v-model
+            -> Agregar el @click de la funcion
+    
+    EJERCICIO RAPIDO #2: Al ejercicio anterior agregar: 
+
+        -> Un boton para limpiar el saludo -> "restablecer"
+        -> Una vez que damos clic en saludar que borre los datos del input
+    
+    EJERCICIO RAPIDO #3: Una app que al agregar la fecha de nacimiento que verifique si es mayor
+    de edad o no en funcion de una constante definida en el sistema
+
+        Req. Funcional: 
+
+            -> const MAYOR_EDAD = 19
+            -> Al dar clic en un boton despliega en pantalla si es mayor de edad o no
+        
+        Dificultad: 
+            -> La fecha tiene que estar en tres inputs: 
+                -> dia
+                -> mes
+                -> anio
+
+    EJERCICIO RAPIDO #4: Buscar una persona por su apellido y mostrar en pantalla el nombre y la edad
+
+        Req. Funcional: 
+        
+            -> Ingresamos el apellido en un input
+
+            const personas = [
+                {
+                    nombre: "alex",
+                    apellido: "casadevall",
+                    edad: 30
+                },
+                ...
+            ]
+
+            alex - 30
+
+    
+

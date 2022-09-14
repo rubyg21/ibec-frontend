@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h3>Calcular Edad</h3>
+      <input type="number" v-model="diaNacimiento" placeholder="Dia" />
+      <br />
+      <input type="number" v-model="mesNacimiento" placeholder="Mes" />
+      <br />
+      <input type="number" v-model="anioNacimiento" placeholder="Año" />
+      <br />
+      <div class="botones">
+        <button class="boton" @click="calculaEdad()">Calcular</button>
+        <button class="boton-borrar" @click="restablecer()">Borrar</button>
+      </div>
+      <p class="mensaje">{{ mensaje }}</p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

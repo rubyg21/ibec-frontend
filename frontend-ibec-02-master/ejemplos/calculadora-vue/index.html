@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>Calculadora</h2>
+        <hr>
+        <form>
+            <input type="number" name="a" v-model="a">
+            <br>
+            <input type="number" name="b" v-model="b">
+            <div>
+                <button type="button" @click="cambioOp('suma')">+</button>
+                <button type="button" @click="cambioOp('resta')">-</button>
+                <button type="button" @click="cambioOp('multiplicacion')">x</button>
+                <button type="button" @click="cambioOp('division')">/</button>
+                <button type="button" @click="igual()">=</button>
+            </div>
+            <p>
+                Resultado: <b id="resultado">{{resultado}}</b>
+            </p>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
